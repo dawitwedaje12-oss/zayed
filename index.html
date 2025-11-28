@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#022c22">
+    
+    <!-- iOS PWA capability -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Agurafi">
+    
+    <!-- Primary Meta Tags -->
+    <title>Agurafi Digital Marketing</title>
+    <meta name="title" content="Agurafi Digital Marketing">
+    <meta name="description" content="Elevating brands through data-driven strategies, innovative campaigns, and measurable results. Explore our services and video portfolio.">
+    <meta name="keywords" content="Agurafi, Digital Marketing, Social Media Marketing, Video Production, Brand Strategy, SEO, Content Creation, Portfolio">
+    <meta name="author" content="Agurafi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://agurafi.com/">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agurafi.com/">
+    <meta property="og:title" content="Agurafi Digital Marketing">
+    <meta property="og:description" content="Elevating brands through data-driven strategies, innovative campaigns, and measurable results. Explore our services and video portfolio.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://agurafi.com/">
+    <meta property="twitter:title" content="Agurafi Digital Marketing">
+    <meta property="twitter:description" content="Elevating brands through data-driven strategies, innovative campaigns, and measurable results. Explore our services and video portfolio.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/ffd700/a-lowercase.png">
+    <link rel="apple-touch-icon" href="https://img.icons8.com/ios-filled/192/ffd700/a-lowercase.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            DEFAULT: '#ffd700',
+                            light: '#ffed4e',
+                            dim: 'rgba(255, 215, 0, 0.1)',
+                        },
+                        navy: {
+                            dark: '#022c22', 
+                            medium: '#0f4c45', 
+                            light: '#134e4a', 
+                            card: 'rgba(15, 76, 69, 0.7)', 
+                        }
+                    },
+                    animation: {
+                        'float': 'float 15s infinite linear',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                        'slide-in': 'slideIn 1.5s ease-out',
+                        'fade-in': 'fadeIn 2s ease-out forwards',
+                        'pulse-slow': 'pulse 4s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%': { transform: 'translateY(0) translateX(0) rotate(0deg)', opacity: '0' },
+                            '10%': { opacity: '1' },
+                            '90%': { opacity: '1' },
+                            '100%': { transform: 'translateY(-100vh) translateX(100px) rotate(360deg)', opacity: '0' },
+                        },
+                        glow: {
+                            'from': { textShadow: '0 0 20px rgba(255, 215, 0, 0.3)' },
+                            'to': { textShadow: '0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4)' }
+                        },
+                        slideIn: {
+                            'from': { transform: 'translateY(30px)', opacity: '0' },
+                            'to': { transform: 'translateY(0)', opacity: '0.8' }
+                        },
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: linear-gradient(135deg, #022c22 0%, #0f4c45 50%, #134e4a 100%);
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #022c22;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #134e4a;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffd700;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body class="text-white antialiased overflow-x-hidden min-h-screen">
+    <div id="root"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
