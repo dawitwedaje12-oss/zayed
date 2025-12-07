@@ -98,40 +98,21 @@
             }
         }
     </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            background: linear-gradient(135deg, #022c22 0%, #0f4c45 50%, #134e4a 100%);
-        }
-        /* Custom scrollbar for better aesthetics */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #022c22;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #134e4a;
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #ffd700;
-        }
-    </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.6",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
 </head>
 <body class="text-white antialiased overflow-x-hidden min-h-screen">
     <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {

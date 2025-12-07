@@ -58,6 +58,16 @@ const Hero: React.FC = () => {
 
     return (
         <section ref={sectionRef} id="home" className="relative h-screen min-h-[800px] flex flex-col justify-center items-center text-center px-4 overflow-hidden pt-20">
+            {/* Background Image Layer */}
+            <div className="absolute inset-0 w-full h-full z-0">
+                <img 
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" 
+                    alt="Cover Background" 
+                    className="w-full h-full object-cover opacity-20"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/95 via-navy-dark/80 to-navy-dark/95"></div>
+            </div>
+
             <ParticleBackground />
 
             {/* Floating Elements */}
@@ -92,9 +102,12 @@ const Hero: React.FC = () => {
                         <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
                     </button>
                     
-                    <a href="#contact" className="group px-8 py-4 rounded-full font-bold text-white border-2 border-white/20 hover:border-gold hover:bg-gold/10 transition-all hover:-translate-y-1">
-                        <span className="tracking-wider uppercase text-sm">Schedule Consultation</span>
-                    </a>
+                    <button 
+                        onClick={() => navigateTo('videos')}
+                        className="group px-8 py-4 rounded-full font-bold text-white border-2 border-white/20 hover:border-gold hover:bg-gold/10 transition-all hover:-translate-y-1 cursor-pointer"
+                    >
+                        <span className="tracking-wider uppercase text-sm">Our Works</span>
+                    </button>
                 </div>
 
                 <div className="mt-16 flex flex-wrap justify-center gap-8 md:gap-16 opacity-0 animate-fade-in" style={{ animationDelay: '1.2s' }}>

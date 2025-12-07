@@ -3,9 +3,9 @@ import { ServiceItem } from '../types';
 
 const SERVICES: ServiceItem[] = [
     {
-        icon: "fa-bullseye",
-        title: "Performance Marketing",
-        description: "Data-driven campaigns that deliver measurable results and maximize ROI through targeted advertising and conversion optimization."
+        icon: "fa-users",
+        title: "Social Media Marketing",
+        description: "Strategic social media campaigns that build brand awareness, engage audiences, and drive conversions across platforms."
     },
     {
         icon: "fa-chart-line",
@@ -13,9 +13,9 @@ const SERVICES: ServiceItem[] = [
         description: "Comprehensive digital roadmaps that align with your business objectives and drive sustainable growth across all channels."
     },
     {
-        icon: "fa-users",
-        title: "Social Media Marketing",
-        description: "Strategic social media campaigns that build brand awareness, engage audiences, and drive conversions across platforms."
+        icon: "fa-bullseye",
+        title: "Performance Marketing",
+        description: "Data-driven campaigns that deliver measurable results and maximize ROI through targeted advertising and conversion optimization."
     },
     {
         icon: "fa-pen-nib",

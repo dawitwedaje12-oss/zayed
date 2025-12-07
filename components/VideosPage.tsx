@@ -1,21 +1,12 @@
+
 import React from 'react';
 
 // Placeholder data for videos
 const VIDEOS = [
     {
-        id: 0,
-        title: "Future Ready",
-        category: "Brand Vision",
-        duration: "TikTok",
-        views: "Trending",
-        icon: "fa-rocket",
-        link: "https://www.tiktok.com/@agurafidigtalmarketing/video/7497600915566906679?is_from_webapp=1&sender_device=pc",
-        isBrand: true
-    },
-    {
         id: 1,
-        title: "Agurafi Latest Work",
-        category: "Social Content",
+        title: "Perfume store",
+        category: "Allure Essence",
         duration: "TikTok",
         views: "Viral",
         icon: "fa-tiktok",
@@ -24,8 +15,8 @@ const VIDEOS = [
     },
     {
         id: 2,
-        title: "Summer Collection Launch",
-        category: "Social Content",
+        title: "Delivery Company",
+        category: "Mela Express",
         duration: "TikTok",
         views: "5.8K",
         icon: "fa-tiktok",
@@ -34,8 +25,8 @@ const VIDEOS = [
     },
     {
         id: 3,
-        title: "Tech Conference Highlights",
-        category: "Social Content",
+        title: "Jewellery Shop",
+        category: "Tsegaye Jewelry",
         duration: "TikTok",
         views: "2.4K",
         icon: "fa-tiktok",
@@ -44,43 +35,54 @@ const VIDEOS = [
     },
     {
         id: 4,
-        title: "Client Success Story",
-        category: "Social Content",
+        title: "Packers and Movers",
+        category: "Mela Packers",
         duration: "TikTok",
         views: "980",
         icon: "fa-tiktok",
-        link: "https://vm.tiktok.com/ZMAKPgNxH/",
+        link: "https://vm.tiktok.com/ZMAKqB73X/",
         isBrand: true
     },
     {
         id: 5,
-        title: "Social Media Campaign",
-        category: "Social Content",
+        title: "Realstate Company",
+        category: "Prime Realstate",
         duration: "TikTok",
         views: "125K",
         icon: "fa-tiktok",
-        link: "https://vm.tiktok.com/ZMAKP7Po1/",
+        link: "https://vm.tiktok.com/ZMAKqQkke/",
         isBrand: true
     },
     {
         id: 6,
-        title: "Behind The Scenes: Agurafi",
-        category: "Social Content",
+        title: "Real-estate Company",
+        category: "Nor sheger Properties",
         duration: "TikTok",
         views: "3.1K",
         icon: "fa-tiktok",
-        link: "https://www.tiktok.com/@agurafidigtalmarketing/video/7473749988581838086?is_from_webapp=1&sender_device=pc",
+        link: "https://vm.tiktok.com/ZMAKq9wyr/",
         isBrand: true
     },
     {
         id: 7,
-        title: "Creative Highlights",
-        category: "Social Content",
+        title: "Clothe Store",
+        category: "Ark Fashion",
         duration: "TikTok",
         views: "4.2K",
         icon: "fa-tiktok",
-        link: "https://vm.tiktok.com/ZMAKPuv6h/",
+        link: "https://vm.tiktok.com/ZMAKqaAgv/",
         isBrand: true
+    },
+    {
+        id: 8,
+        title: "Yegna Trading Showcase",
+        category: "Social Content",
+        duration: "TikTok",
+        views: "Trending",
+        icon: "fa-tiktok",
+        link: "https://vm.tiktok.com/ZMAKVQdm2/",
+        isBrand: true,
+        image: "https://images.unsplash.com/photo-1494412574643-35d324698420?auto=format&fit=crop&w=800&q=80"
     }
 ];
 
@@ -126,26 +128,46 @@ const VideosPage: React.FC = () => {
                             >
                                 {/* Video Thumbnail Placeholder */}
                                 <div className="relative h-56 bg-gradient-to-br from-navy-light to-navy-medium overflow-hidden">
-                                    {/* Abstract Pattern */}
-                                    <div className="absolute inset-0 opacity-10" style={{
-                                        backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)',
-                                        backgroundSize: '20px 20px'
-                                    }}></div>
+                                    {/* Abstract Pattern or Image */}
+                                    {/* @ts-ignore */}
+                                    {video.image ? (
+                                        <img 
+                                            // @ts-ignore
+                                            src={video.image} 
+                                            alt={video.title} 
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                                        />
+                                    ) : (
+                                        <div className="absolute inset-0 opacity-10" style={{
+                                            backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)',
+                                            backgroundSize: '20px 20px'
+                                        }}></div>
+                                    )}
                                     
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-16 h-16 rounded-full bg-white/5 backdrop-blur-sm flex items-center justify-center border border-white/10 group-hover:bg-gold group-hover:border-gold transition-all duration-300 z-10 scale-90 group-hover:scale-100">
-                                            <i className={`fas ${video.link ? 'fa-external-link-alt' : 'fa-play'} text-white/80 group-hover:text-navy-dark ml-1 text-xl transition-colors`}></i>
+                                    {!video.image && (
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <div className="w-16 h-16 rounded-full bg-white/5 backdrop-blur-sm flex items-center justify-center border border-white/10 group-hover:bg-gold group-hover:border-gold transition-all duration-300 z-10 scale-90 group-hover:scale-100">
+                                                <i className={`fas ${video.link ? 'fa-external-link-alt' : 'fa-play'} text-white/80 group-hover:text-navy-dark ml-1 text-xl transition-colors`}></i>
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
+
+                                    {video.image && (
+                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                                            <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+                                                <i className={`fas ${video.link ? 'fa-external-link-alt' : 'fa-play'} text-navy-dark ml-1 text-xl`}></i>
+                                            </div>
+                                        </div>
+                                    )}
                                     
                                     {/* Overlay Gradient */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-transparent to-transparent"></div>
+                                    <div className={`absolute inset-0 bg-gradient-to-t ${video.image ? 'from-navy-dark/90 via-navy-dark/20 to-transparent' : 'from-navy-dark/90 via-transparent to-transparent'}`}></div>
                                     
                                     {/* Video Info Overlay */}
-                                    <div className="absolute bottom-4 right-4 bg-black/60 px-2 py-1 rounded text-xs font-mono font-bold backdrop-blur-sm border border-white/5">
+                                    <div className="absolute bottom-4 right-4 bg-black/60 px-2 py-1 rounded text-xs font-mono font-bold backdrop-blur-sm border border-white/5 z-20">
                                         {video.duration}
                                     </div>
-                                    <div className="absolute top-4 left-4 bg-gold/90 px-3 py-1 rounded-full text-navy-dark text-xs font-bold uppercase tracking-wide shadow-lg">
+                                    <div className="absolute top-4 left-4 bg-gold/90 px-3 py-1 rounded-full text-navy-dark text-xs font-bold uppercase tracking-wide shadow-lg z-20">
                                         {video.category}
                                     </div>
                                 </div>

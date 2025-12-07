@@ -92,10 +92,12 @@ const About: React.FC = () => {
                                 <div className="text-8xl text-gold/80 mb-4 transition-colors duration-300 group-hover:text-gold animate-float" style={{ animationDuration: '6s' }}>
                                     <i className="fas fa-play-circle"></i>
                                 </div>
-                                <h4 className="text-3xl font-bold text-white uppercase tracking-[0.2em] mb-2 text-shadow-lg">Future Ready</h4>
+                                <h4 className="text-2xl font-bold text-white uppercase tracking-widest mb-2 text-shadow-lg leading-relaxed">
+                                    Click to see videos we made for our clients
+                                </h4>
                                 <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                                     <span className="inline-block px-6 py-2 bg-gold text-navy-dark font-bold rounded-full uppercase text-xs tracking-widest shadow-lg">
-                                        Watch Future Ready
+                                        Watch Now
                                     </span>
                                 </div>
                             </div>
